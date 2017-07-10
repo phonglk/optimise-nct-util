@@ -2,7 +2,9 @@ Go to https://phonglk.github.io/optimise-nct-util/
 
 Drag and drop "Optimise NCT" to your bookmark bar
 
-After NCT Player is loaded, just click the bookmark bar to optimise its player.
+After NCT User Player is loaded, just click the bookmark bar to optimise its player.
+
+* User Player is your own playlist at /user/ ...
 
 # What is NCT ?
 
