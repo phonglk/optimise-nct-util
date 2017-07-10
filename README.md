@@ -1,4 +1,6 @@
-Drag and drop this to your bookmark bar
+Go to https://phonglk.github.io/optimise-nct-util/ 
+
+Drag and drop "Optimise NCT" to your bookmark bar
 
 After NCT Player is loaded, just click the bookmark bar to optimise its player.
 
