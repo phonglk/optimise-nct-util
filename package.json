@@ -1,0 +1,19 @@
+{
+  "name": "optimise-nct-util",
+  "version": "1.0.0",
+  "description": "Optimise Nhac Cua Tui Player Performance",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/phonglk/optimise-nct-util.git"
+  },
+  "author": "Khoi-Phong Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/phonglk/optimise-nct-util/issues"
+  },
+  "homepage": "https://github.com/phonglk/optimise-nct-util#readme"
+}
