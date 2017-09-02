@@ -57,6 +57,25 @@ function bml(){
       }
     }
   }
+
+  function bindRemoveTimeRefresh() {
+    const $audio = document.querySelector('audio[id^=mp3]');
+    function removeTimeParam() {
+      $audio.src = $audio.src.replace(/\?t=\d+/, '');
+      $audio.play();
+    }
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.type === "attributes" && /\?t=\d+/.test($audio.src) === true) {
+          removeTimeParam();
+        }
+      });
+    });
+    const config = { attributes: true, childList: false, characterData: false };
+    removeTimeParam();
+    observer.observe($audio, config);
+  }
+
   if (location.pathname.match(/^\/user\//) !== null)  {
     $._data($(`#mp3${player.pe}`)[0], 'events').timeupdate[0].handler = () => {};
     $._data($(`#mp3${player.pe}`)[0], 'events').progress[0].handler = () => {};
@@ -99,6 +118,7 @@ function bml(){
     }
     rebindProcessBuffering();
     bindCssRemoveGif();
+    bindRemoveTimeRefresh();
   }
   console.log('Injection OK');
 }

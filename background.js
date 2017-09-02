@@ -1,15 +1,12 @@
-chrome.runtime.onInstalled.addListener(function() {
-  chrome.browserAction.onClicked.addListener((tab) => {
-    console.info(`Active ${tab.url}`);
-    chrome.tabs.executeScript({ file: 'content.js' });
+chrome.browserAction.onClicked.addListener((tab) => {
+  console.info(`Active ${tab.url}`);
+  chrome.tabs.executeScript({ file: 'content.js' });
+  chrome.browserAction.setBadgeText({
+    text: 'OK',
+  })
+  setTimeout(() => {
     chrome.browserAction.setBadgeText({
-      text: 'OK',
+      text: '',
     })
-    setTimeout(() => {
-      chrome.browserAction.setBadgeText({
-        text: '',
-      })
-    }, 3000)
-  });
+  }, 3000)
 });
-
